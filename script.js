@@ -1,5 +1,5 @@
 console.log("connected")
- // Wait for the DOM content to fully load
+ 
  document.addEventListener('DOMContentLoaded', function() {
     const enterHomeBtn = document.getElementById('enterHomeBtn');
 
@@ -282,7 +282,7 @@ searchInput.addEventListener('keyup', function() {
  
  if (logoutBtn) {
     logoutBtn.addEventListener('click', function () {
-        window.location.href = 'landing.html'; 
+        window.location.href = 'index.html'; 
     });
 } else {
     console.log("Logout button not found");
