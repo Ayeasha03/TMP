@@ -3,129 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="/landing.css">
 </head>
 <body>
-   <header class="head">
-    <div class="carry">
-        <div class="carry1"><img src="/movies/movie-icon.png" alt="logo icon"><h2>TMP</h2></div>
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-        <nav class="nav_items" id="navMenu">
-            <ul>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#tv_shows">TV Shows</a></li>
-                <li><a href="#people">People</a></li>
-                <li><a href="#more">More</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="carry2">
-            <button id="logoutBtn" class="login">Exist Movie Webpage</button>
-            
-    </div>
-   </header> 
-
-   <main>
-    <section id= "first">
-        <div class="top">
-        <div class="top1">
-        <h1>Welcome.</h1>
-        <p>Millions of movies, TV shows and people to discover. Explore Now.</p>
-    </div>
-        <div class="top2">
-        <input type="text" id="searchInput" placeholder="type for a movie, TV show, person....">
-        <button >Search</button>
-    </div>
+    
+  <header>
+    <div>
+    <img src="/images/movie-icon.png" >
+    <h1>TMP</h1>
 </div>
-    </section>
-    <section id="movies">
-        <div>
-            <div class="up">
-                <h1>Recommended For You</h1>
-            </div>
-            <div id="recommended-container" class="down">
-            </div>
-    </section>
 
- <section id="tv_shows">
-        <div>
-             <div class="name">
-                <h2>Latest Trailers</h2>
-             </div>
-             <div id="trailers-container" class="trailer-container">
- 
-             </div>
-        </div>
-    </section>
-
-    <section id="people">
-        <div class="popular">
-            <div>
-                <h1>What's Popular</h1>
-            </div>
-            <div id="popular-container" class="popular-cont">
-
-
-            </div>
-        </div>
-    </section>
-
-<section id="more">
-    <div class="more">
-        <div><h1>Cartoons</h1></div>
-
-        <div id="cartoon-container"
-        class="more_container">
-
-        
-
-        </div>
-    </div>
-</section>
-   </main>
-
-   <footer id="footer">
-    <div class="side">
-        <div class="side1"><img src="/movies/movie-icon.png" alt="movie icon"><h2>TMP</h2>
-        <p id="footerUserName"></p>
-        </div>
-<div class="sides">
-        <div class="side2">
-            <h2>THE BASICS</h2>
-            <a href="#">About TMP</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Support Forums</a>
-            <a href="#">System Status</a>
-        </div>
-
-        <div class="side2">
-            <h2>GET INVOLVED</h2>
-            <a href="#">Contribute to Bible</a>
-            <a href="#">Add New Movie</a>
-            <a href="#">Add a New TV Show</a>
-        </div>
-
-        <div class="side2">
-            <h2>COMMUNITIES</h2>
-            <a href="#">Guidelines</a>
-            <a href="#">Discussions</a>
-            <a href="#">Leaderboard</a>
-        </div>
-
-        <div class="side2">
-            <h2>LEGAL</h2>
-            <a href="#">Terms of Use</a>
-            <a href="#">Privacy and policy</a>
-            <a href="#">DMCA Policy</a>
-        </div>
-    </div>
-        </div>
-   </footer>
-   <script src="script.js"></script>
+<button id="enterHomeBtn">Watch Now</button>
+  </header>
+  <main class="video-background" >
+    
+      <video autoplay muted loop class="background-video">
+        <source src="/images/13306-246909929_tiny.mp4"  alt="your browser" type="video/mp4">
+      </video>
+      <div class="container">
+<div class="head">
+    <h1>Welcome to TMP movie world</h1>
+</div>
+  
+  <div class="content">
+    <h2>Discover Amazing Movies</h2>
+    <p>Browse Your favorite movies.</p>
+  </div>
+  
+</div>
+</main>
+  
+  <footer>
+    <p>&copy; 2024 TMP Movie Website</p>
+  </footer>
+<script src="script.js"></script>
 </body>
 </html>
