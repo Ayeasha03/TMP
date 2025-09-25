@@ -10,29 +10,32 @@ body {
     font-family: 'Noto Sans', sans-serif;
 }
 header {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 20px 50px;
+    padding: 14px 50px;
     background-color: #5e2a84;
     height: 70px;
     position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 .carry {
-    display: inline-flex;
+    display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 40px;
 }
 .carry1 {
     display: flex;
-    gap: 8px;
+    justify-content: space-between;
+    gap: 100px;
 }
-.carry1 img {
+.logo{
+    display: inline-flex;
+    gap: 6px;
+}
+.logo img {
     width: 40px;
     height: 40px;
 }
-.carry1 h2 {
+.logo h2 {
     font-size: 30px;
     font-weight: bold;
     background: linear-gradient(to right, #8f38e0, #8101f8cb);
@@ -43,6 +46,7 @@ nav ul {
     display: flex;
     gap: 20px;
     list-style-type: none;
+    margin-top: 8px;
 }
 nav ul li a {
     text-decoration: none;
@@ -50,8 +54,25 @@ nav ul li a {
     font-weight: 500;
 }
 nav li a:hover {
-    color: #f39c12;
+    color: #fbc02d;
     text-decoration: line-through;
+}
+.carry2 {
+    display: flex;
+    gap: 16px;
+}
+.exit {
+    padding: 8px 16px;
+    border-radius: 16px;
+    background-color: #fbc02d;
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+    border: 1px solid #9c4dcc;
+    margin-top: 6px;
+}
+.exit:hover {
+    background-color: #6a1b9a;
 }
 .hamburger-menu {
     display: none;
@@ -67,28 +88,12 @@ nav li a:hover {
     background-color: #9d66d3;
     border-radius: 3px;
 }
-
-.carry2 {
-    display: flex;
-    gap: 16px;
-}
-.login {
-    width: 12rem;
-    height: 30px;
-    border-radius: 16px;
-    background-color: #fbc02d;
-    color: #fff;
-    font-size: medium;
-    font-weight: 500;
-    border: 1px solid #9c4dcc;
-}
-.login:hover {
-    background-color: #6a1b9a;
-    
+.mobile-exit {
+    display: none;
 }
 
 #first {
-    background-image: url("images/avengers.jpg");
+    background-image: url("../images/avengers.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -144,6 +149,53 @@ nav li a:hover {
 .top2 input::placeholder {
     color: #999;
 }
+.search-card {
+    display: flex;
+    gap: 15px;
+    border: 1px solid #fbc02d;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e9e0e0;
+    margin-bottom: 15px;
+    display: flex;
+  justify-content: flex-start;
+}
+
+.search-card img {
+    width: 120px; /* fixed width for poster */
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.search-card .info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.search-card h4 {
+    margin: 0;
+    font-size: 20px;
+    color: #7003af;
+    text-decoration: none;
+}
+
+.search-card .release-date {
+    font-size: 14px;
+    color: #8e44ad;
+    margin: 5px 0;
+}
+
+.search-card .overview {
+    font-size: 14px;
+    color: #8e44ad;
+    white-space: normal;   /* allow line breaks */
+    word-wrap: break-word; /* break long words if needed */
+    line-height: 1.4;
+}
+
 #movies {
     background-color:  #8e44ad;
     height: 80vh;
@@ -169,19 +221,20 @@ nav li a:hover {
     display: none;
 }
 .movie_card-card {
-    border: 1px solid #f39c12;
+    border: 1px solid #fbc02d;
     border-radius: 10px;
     width: 200px;
-    height: 310px;
+    height: 320px;
     box-sizing: border-box;
 }
-.movie_card-card iframe {
-    width: 198px;
-    border-radius: 10px 10px 0 0;
+.movie_card-card img {
+    width:198px; 
+    height:240px; 
+    border-radius:10px 10px 0 0;
     border-color: none;
     border: none;
 }
-.movie_card-card iframe:hover {
+.movie_card-card img:hover {
 transform: scale(1.1);
 }
 .movie_card-card h4 {
@@ -205,20 +258,14 @@ text-overflow: ellipsis;
 white-space: nowrap;
 padding: 0 10px;
 }
-.date {
-    font-size: 16px;
-    color: #e9e0e0;
-    text-align: center;
-}
-
 #tv_shows {
-    background-color:  #f2f3f4;
+    background-color:#f2f3f4;
     height: 75vh;
     width: 100%;
     padding: 20px 50px;
     color: #8e44ad;
 }
-.name h2 {
+.name h1 {
     font-size: 30px;
     font-weight: bold;
     padding-bottom: 40px;
@@ -235,19 +282,19 @@ padding: 0 10px;
     display: none;
 }
 .movie-container-card {
-    border: 1px solid #f39c12;
+    border: 1px solid #fbc02d;
     border-radius: 10px;
     width: 400px;
-    height: 310px;
+    height: 320px;
     box-sizing: border-box;
 }
-.movie-container-card iframe {
+.movie-container-card img {
     width: 398px;
-    height: 200px;
+    height: 240px;
     border-radius: 10px 10px 0 0;
     border: none;
 }
-.movie-container-card iframe:hover {
+.movie-container-card img:hover {
     transform: scale(1.1);
     }
 .movie-container-card h4 {
@@ -263,8 +310,8 @@ padding: 0 10px;
 }
 
 .movie-container-card p {
-    font-size: 16px;
-    color: #be71eb;
+    font-size: 14px;
+    color: #671099;
     text-align: center;
     padding-top: 5px;
 }
@@ -274,12 +321,13 @@ padding: 0 10px;
     height: 80vh;
     width: 100%;
     padding:  50px;
+    color: white;
 }
 .popular h1 {
     font-size: 30px;
     font-weight: bold;
     padding-bottom: 40px;
-    color: #fff;
+    color: white;
 }
 .popular-cont {
     display: flex;
@@ -293,19 +341,20 @@ padding: 0 10px;
     display: none;
 }
 .popular-card-card {
-    border: 1px solid #f39c12;
+    border: 1px solid #fbc02d;
     border-radius: 10px;
     width: 200px;
-    height: 310px;
+    height: 320px;
     box-sizing: border-box;
 }
-.popular-card-card iframe {
-    width: 198px;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
+.popular-card-card img {
+    width:198px; 
+    height:240px; 
+    border-radius:10px 10px 0 0;
+    border-color: none;
     border: none;
 }
-.popular-card-card iframe:hover {
+.popular-card-card img:hover {
     transform: scale(1.1);
     }
 .popular-card-card h4 {
@@ -322,7 +371,7 @@ padding: 0 10px;
 }
 
 .popular-card-card p {
-    font-size: 16px;
+    font-size: 14px;
     color: #e9e0e0;
     text-align: center;
     padding-top: 5px;
@@ -352,19 +401,20 @@ padding: 0 10px;
     display: none;
 }
 .more_card-card {
-    border: 1px solid #f39c12;
+    border: 1px solid #fbc02d;
     border-radius: 10px;
     width: 200px;
     height: 310px;
     box-sizing: border-box;
 }
-.more_card-card iframe {
-    width: 198px;
-    height: 200px;
-    border-radius: 10px 10px 0 0;
+.more_card-card img {
+    width:198px; 
+    height:240px; 
+    border-radius:10px 10px 0 0;
+    border-color: none;
     border: none;
 }
-.more_card-card iframe:hover {
+.more_card-card img:hover {
     transform: scale(1.1);
     }
 .more_card-card h4 {
@@ -381,14 +431,14 @@ padding: 0 10px;
 }
 
 .more_card-card p {
-    font-size: 16px;
+    font-size: 14px;
     color: #e9e0e0;
     text-align: center;
     padding-top: 5px;
 }
-.side {
+#footer {
     width: 100%;
-    height: 60vh;
+    height: 80vh;
     padding: 50px 200px;
     display: flex;
     justify-content: space-between;
@@ -398,14 +448,14 @@ padding: 0 10px;
 }
 .sides {
     display: flex;
-    padding-top: 70px;
+    padding-top: 50px;
     gap: 1.5rem;
 }
-.side1 img{
+.footer-logo img{
     width: 100px;
     height: 100px;
 }
-.side1 h2 {
+.footer-logo h2 {
    font-size: 45px;
    padding-bottom: 30px;
 }
@@ -414,29 +464,94 @@ padding: 0 10px;
     margin-left: 20px;
 }
 .side2 h2 {
-    font-size: 20px;
-    padding-bottom: 20px;
-    color: #fff;
+    font-size: 24px;
+    padding-bottom: 10px;
+    color: #fbc02d;
 }
 .side2 a{
     display: block;
     text-decoration: none;
-    color: #f39c12;
-    padding-left: 10px;
-    line-height: 1.8em;
+    color: #fff;
+    line-height: 1.4em;
+    margin-bottom: 8px;
 }
 .side2 a:hover {
     color: #ba81f0;
 }
 
-@media (min-width: 425px) and (max-width: 768px) {
-    .side {
+@media (min-width: 426px) and (max-width: 768px) {
+    header{
+        height:56px;
+    }
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+    .logo h2{
+        font-size: 24px;
+    }
+    nav ul {
+        gap: 14px;
+        font-size: 14px;
+        margin-top: 5px;
+    }
+    .exit {
+        padding: 4px 10px;
+        margin-top: -3px;
+        font-size: 14px;
+    }
+    .top {
+        padding: 20px 30px;
+    }
+    .top1 {
+        padding-top: 0px;
+    }
+    .top1 h1 {
+        font-size: 36px;
+    }
+    #movies, #tv_shows, #people, #more {
+        height: 70vh;
+        padding: 30px;
+    }
+    .up h1, .popular h1, .more h1{
+        font-size: 24px;
+        padding-bottom: 20px;
+    }
+    .movie_card-card, .popular-card-card, .more_card-card {
+        height: 290px;
+        width: 160px;
+    }
+    .movie_card-card img, .popular-card-card img, .more_card-card img {
+        height: 190px;
+        width: 158px;
+    }
+    .movie_card-card h4, .popular-card-card h4, .more_card-card h4 {
+        font-size: 16px;
+        width: auto;
+        white-space: normal;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
+    }
+    .movie-container-card{
+        width: 320px;
+        height: 280px;
+    }
+    .name h1{
+        font-size: 24px;
+        padding-bottom: 30px;
+    }
+    .movie-container-card img{
+        width: 318px;
+        height: 200px;
+    }
+    #footer {
         width: 100%;
-        height: 120vh;
-        padding: 50px;
+        height: 80vh;
+        padding: 30px;
         display: block;
         justify-content: space-between;
-        background-color: #2c0c49;
+        background-color: #5e2a84;
         gap: 10px;
         color: #FFF;
     }
@@ -445,11 +560,11 @@ padding: 0 10px;
         flex-wrap: wrap;
         padding-top: 10px;
     }
-    .side1 img{
+    .footer-logo img{
         width: 70px;
         height: 70px;
     }
-    .side1 h2 {
+    .footer-logo h2 {
        font-size: 32px;
        padding-bottom: 30px;
     }
@@ -460,61 +575,93 @@ padding: 0 10px;
 }
 
 
-@media (max-width:426px) {
+@media (max-width:425px) {
     body {
         width: 100%;
     }
-    .nav_items {
-        display: none;
+    header {
+        height: 50px;
     }
-    .nav_items.show {
-        display: block;
-        background-color: rgba(0, 0, 0, 0.9);
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 100%;
-        padding: 10px;
-        text-align: center;
-        z-index: 50;
-    }
-    
     .hamburger-menu {
-        display: flex;
-    }
-    .nav_items ul {
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-    }
-    
+    display: flex;
+  }
 
-    
-    .nav_items ul li a {
-       text-decoration: none;
-       color: #FFF;
-       padding: 10px 0;
-        font-size: 18px;
-        display: block;
-    
-    }
-    .carry1 {
-        display: block;
-        justify-content: space-between;
-        align-items: center;
-        gap: 40px;
-    }
-    .carry1 img {
+  .nav_items {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 150px;
+    height: 100%;
+    background-color: #8e44ad;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav_items.active {
+    right: 0;
+  }
+
+  .nav_items ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .carry2 {
+    display: none; /* hide desktop button */
+  }
+
+  .mobile-exit {
+    display: block; /* show Exist button in menu */
+  }
+.login {
+    padding: 8px 16px;
+    border-radius: 16px;
+    background-color: #fbc02d;
+    color: #fff;
+    font-size: medium;
+    font-weight: 500;
+    border: 1px solid #9c4dcc;
+    margin-top: 6px;
+}
+.login:hover {
+    background-color: #6a1b9a;
+}
+.exit {
+    display: none;
+}
+
+ /* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4); /* dim background */
+  z-index: 40; /* below nav menu but above page */
+}
+
+/* Show overlay when nav is active */
+#overlay.active {
+  display: block;
+}
+
+    .logo img {
         width: 25px;
         height: 25px;
     }
-    .carry1 h2 {
+    .logo h2 {
         font-size: 16px;
     }
-    .login {
-        width: 70px;
-        height: 25px;
-        font-size: 10px;
+    #first{
+        height: 42vh;
+    }
+    #first::before{
+        height: 42vh;
     }
     .top1 {
         padding-top: 30px;
@@ -527,8 +674,8 @@ padding: 0 10px;
         font-size: 16px;
     }
     .top2 {
-width: 100%;
-display: flex;
+        width: 100%;
+        display: flex;
     }
     .top2 input {
         width: 80%;
@@ -548,72 +695,64 @@ display: flex;
         border-radius: 0 50px 50px 0;
        
     }
-    .up h1 {
+    #movies, #tv_shows, #people, #more{
+        height: 66vh;
+        padding: 20px 25px;
+    }
+    .up h1, .name h1, .popular h1, .more h1 {
         font-size: 20px;
-        padding-bottom: 20px;
+        padding-bottom: 14px;
     }
-    .movie_card-card h4 { 
-        font-size: 18px;
+    
+    .movie_card-card, .popular-card-card, .more_card-card{
+        width: 140px;
+        height: 276px
     }
-    .movie_card-card p { 
+    .movie_card-card img, .popular-card-card img, .more_card-card img{
+        width: 138px;
+        height: 180px;
+        margin-bottom: 0px;
+    }
+    .movie_card-card h4, .movie-container-card h4, .popular-card-card h4, .more_card-card h4 { 
         font-size: 14px;
+        padding-top: px;
+        width: auto;
+        white-space: normal;
+        word-wrap: break-word;
+        margin: 0;
+        padding: 0;
     }
-    .name h2 {
-        font-size: 20px;
-        padding-bottom: 20px;
+    .movie_card-card p, .movie-container-card p, .popular-card-card p, .more_card-card p { 
+        font-size: 12px;
     }
-    .movie-container-card h4 {
-        font-size: 18px;
-        
+    .movie-container-card{
+        margin: 0px;
+        padding: 0;
+        width: 290px;
+        height: 250px
     }
-    .movie-container-card p {
-        font-size: 14px;
+    .movie-container-card img {
+        width: 288px;
+        height: 180px;
     }
-    .popular h1 {
-        font-size: 20px;
-        padding-bottom: 20px;
+    #footer {
+        height: 90vh;
+        padding: 0;
+        margin: 0;
     }
-    .popular-card-card h4 {
-        font-size: 18px;
-    }
-    .popular-card-card p {
-        font-size: 14px;
-    }
-    .more h1 {
-        font-size: 20px;
-    }
-    .more_card-card h4 {
-        font-size: 18px;
-    }
-    .more_card-card p {
-        font-size: 14px;
-    }
-    .side {
-        width: 100%;
-        height: 120vh;
-        padding: 50px;
-        display: block;
-        justify-content: space-between;
-        background-color: #2c0c49;
-        gap: 10px;
-        color: #FFF;
+    .footer-logo {
+        display: none;
     }
     .sides {
         display: block;
-        padding-top: 10px;
-    }
-    .side1 img{
-        width: 50px;
-        height: 50px;
-    }
-    .side1 h2 {
-       font-size: 24px;
+        padding-bottom: 8px;
     }
     .side2 h2 {
         font-size: 16px;
-        padding-top: 10px ;
+        padding-bottom: 2px ;
     }
-    .side2 a {
+    .side2 {
         font-size: 10px;
+        padding-bottom: 2px;
     }
 }

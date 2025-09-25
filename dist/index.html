@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
     
@@ -14,7 +14,7 @@
     <h1>TMP</h1>
 </div>
 
-<button id="enterHomeBtn">Watch Now</button>
+<button id="watchNow">Watch Now</button>
   </header>
   <main class="video-background" >
     
@@ -23,20 +23,21 @@
       </video>
       <div class="container">
 <div class="head">
-    <h1>Welcome to TMP movie world</h1>
+    <h1 id="typewriter">Welcome to TMP movie world</h1>
 </div>
   
   <div class="content">
-    <h2>Discover Amazing Movies</h2>
-    <p>Browse Your favorite movies.</p>
+    <h2>Unlimited Entertainment Awaits</h2>
+    <p>Browse and enjoy your favorite movies, trailers, and more.</p>
   </div>
   
 </div>
 </main>
   
   <footer>
-    <p>&copy; 2024 TMP Movie Website</p>
-  </footer>
-<script src="script.js"></script>
+  <p>© <script>document.write(new Date().getFullYear());</script> TMP Movie World. All rights reserved.</p>
+</footer>
+
+<script src="/dist/script.js"></script>
 </body>
 </html>

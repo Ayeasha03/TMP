@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="./css/home.css">
 </head>
 <body>
    <header class="head">
     <div class="carry">
-        <div class="carry1"><img src="images/movie-icon.png" alt="logo icon"><h2>TMP</h2></div>
-        <div class="hamburger-menu" id="hamburgerMenu">
-            <span></span>
-            <span></span>
-            <span></span>
+        <div class="carry1">
+            <div class="logo">
+            <img src="images/movie-icon.png" alt="logo icon">
+            <h2>TMP</h2>
         </div>
+        
         <nav class="nav_items" id="navMenu">
-            <ul>
-                <li><a href="#movies">Movies</a></li>
-                <li><a href="#tv_shows">TV Shows</a></li>
-                <li><a href="#people">People</a></li>
-                <li><a href="#more">More</a></li>
-            </ul>
-        </nav>
+    <ul class="navlink">
+      <li><a href="#movies">Movies</a></li>
+      <li><a href="#tv_shows">TV Shows</a></li>
+      <li><a href="#people">People</a></li>
+      <li><a href="#more">More</a></li>
+      <li class="mobile-exit">
+        <button class="login" id="homeBtn">Back</button>
+    </li>
+    </ul>
+  </nav>
+  </div>
+
+   <div class="carry2">
+    <button class="exit" id="exitBtn">Exit</button>
     </div>
-    <div class="carry2">
-            <button id="logoutBtn" class="login">Exist Movie Webpage</button>
-            
-    </div>
+    
+
+    <div class="hamburger-menu" id="hamburgerMenu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  </div>
    </header> 
+
+   <div class="overlay" id="overLay"></div>
 
    <main>
     <section id= "first">
@@ -39,10 +52,12 @@
     </div>
         <div class="top2">
         <input type="text" id="searchInput" placeholder="type for a movie, TV show, person....">
-        <button >Search</button>
+        <button id="searchBtn" >Search</button>
     </div>
 </div>
     </section>
+    <div id="searchResults" class="search-container"></div>
+
     <section id="movies">
         <div>
             <div class="up">
@@ -90,8 +105,8 @@
    </main>
 
    <footer id="footer">
-    <div class="side">
-        <div class="side1"><img src="images/movie-icon.png" alt="movie icon"><h2>TMP</h2>
+    <div class="footer">
+        <div class="footer-logo"><img src="./images/movie-icon.png" alt="movie icon"><h2>TMP</h2>
         <p id="footerUserName"></p>
         </div>
 <div class="sides">
@@ -126,6 +141,7 @@
     </div>
         </div>
    </footer>
-   <script src="script.js"></script>
+
+   <script src="/dist/script.js" defer></script>
 </body>
 </html>
