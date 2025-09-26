@@ -1,0 +1,21 @@
+# Ignore node modules (always)
+node_modules/
+
+# Ignore lock files if you don’t want to commit them
+package-lock.json
+yarn.lock
+
+# Ignore temporary build caches
+*.log
+*.tmp
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# If you use VSCode
+.vscode/
+
+# --- IMPORTANT ---
+# DO NOT ignore the dist folder if you need to deploy built JS to GitHub Pages.
+# So we leave `dist/` out of this file.
