@@ -69,7 +69,7 @@ TMP/
 
 GitHub Pages: https://ayeasha03.github.io/TMP/
 
-Netlify: tmp-website.netlify.app
+Netlify: (https://tmp-website.netlify.app/index.html)
 
 
 ## License
