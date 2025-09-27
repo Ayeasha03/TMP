@@ -1,18 +1,22 @@
 @echo off
 
-REM Create docs folder and subfolders if they don't exist
-if not exist docs mkdir docs
-if not exist docs\css mkdir docs\css
-if not exist docs\js mkdir docs\js
+REM Create folders if they don't exist
+if not exist dist mkdir dist
+if not exist dist\css mkdir dist\css
+if not exist dist\js mkdir dist\js
+if not exist dist\img mkdir dist\img
 
-REM Compile TypeScript to docs/js
-tsc src\ts\script.ts --outDir docs\js --target ES6
+REM Compile TypeScript to dist/js
+tsc src\ts\script.ts --outDir dist\js --target ES6
 
-REM Copy all HTML files from src to docs
-for %%f in (src\*.html) do copy "%%f" docs\
+REM Copy HTML
+for %%f in (src\*.html) do copy "%%f" dist\
 
-REM Copy all CSS files from src/css to docs/css
-xcopy src\css\* docs\css\ /E /Y /I
+REM Copy CSS
+xcopy src\css\* dist\css\ /E /Y /I
+
+REM Copy images
+xcopy src\img\* dist\img\ /E /Y /I
 
 echo Build complete!
 pause
