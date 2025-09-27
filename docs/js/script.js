@@ -1,8 +1,7 @@
-"use strict";
 document.addEventListener("DOMContentLoaded", () => {
     //watch now button
     const watchNowBtn = document.getElementById('watchNow');
-    watchNowBtn?.addEventListener("click", () => {
+    watchNowBtn === null || watchNowBtn === void 0 ? void 0 : watchNowBtn.addEventListener("click", () => {
         window.location.href = "home.html";
     });
     //typewriter effect
@@ -23,30 +22,30 @@ document.addEventListener("DOMContentLoaded", () => {
         typeText(title, text, 160);
     //exist button
     const exitBtn = document.getElementById('exitBtn');
-    exitBtn?.addEventListener("click", () => {
+    exitBtn === null || exitBtn === void 0 ? void 0 : exitBtn.addEventListener("click", () => {
         window.location.href = "index.html";
     });
     const homeBtn = document.getElementById('homeBtn');
-    homeBtn?.addEventListener("click", () => {
+    homeBtn === null || homeBtn === void 0 ? void 0 : homeBtn.addEventListener("click", () => {
         window.location.href = "index.html";
     });
     //hamburger menu
     const hamburgerMenu = document.getElementById('hamburgerMenu');
     const navMenu = document.getElementById('navMenu');
     const overlay = document.getElementById('overLay');
-    overlay?.addEventListener('click', () => {
+    overlay === null || overlay === void 0 ? void 0 : overlay.addEventListener('click', () => {
         navMenu.classList.remove('active');
         overlay.classList.remove('active');
     });
-    hamburgerMenu?.addEventListener("click", () => {
+    hamburgerMenu === null || hamburgerMenu === void 0 ? void 0 : hamburgerMenu.addEventListener("click", () => {
         navMenu.classList.add('active');
-        overlay?.classList.add('active');
+        overlay === null || overlay === void 0 ? void 0 : overlay.classList.add('active');
     });
     //search input
     const searchInput = document.getElementById('searchInput');
     ;
     const searchResults = document.getElementById('searchResults');
-    searchInput?.addEventListener('input', () => {
+    searchInput === null || searchInput === void 0 ? void 0 : searchInput.addEventListener('input', () => {
         const query = searchInput.value.trim();
         if (!query) {
             if (searchResults) {
@@ -146,7 +145,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     const backBtn = document.getElementById('backButton');
-    backBtn?.addEventListener("click", () => {
+    backBtn === null || backBtn === void 0 ? void 0 : backBtn.addEventListener("click", () => {
         window.location.href = "home.html";
     });
 });
